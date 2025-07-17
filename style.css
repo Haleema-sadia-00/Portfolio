@@ -702,76 +702,61 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0.2rem 0.5rem;
-    box-shadow: 0 2px 16px rgba(124, 111, 249, 0.10);
     background: #fff;
     min-height: 48px;
     height: 48px;
+    box-shadow: 0 2px 16px rgba(124, 111, 249, 0.10);
   }
   .nav-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
-    gap: 0.5rem;
+    gap: 0;
     padding: 0;
     min-height: 48px;
     height: 48px;
   }
   .nav-logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
     flex: none;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1.1rem;
-    line-height: 1;
+    text-align: left;
     display: flex;
     align-items: center;
     height: 48px;
   }
   #hamburger {
-    flex: none;
-    margin: 0;
-  }
-  #hamburger .bar {
-    background: #fff !important;
-    height: 4px;
-    border-radius: 3px;
-    box-shadow: none;
-    transition: all 0.3s;
-  }
-  #hamburger:hover, body.nav-open #hamburger {
-    background: var(--primary, #7C6FF9);
-    border-color: var(--primary-dark, #5a4fcf);
-  }
-  #hamburger:hover .bar, body.nav-open #hamburger .bar {
-    background: #fff !important;
-  }
-  #hamburger {
-    width: 52px;
-    height: 52px;
-    background: var(--primary, #7C6FF9);
-    border: 2.5px solid var(--primary-dark, #5a4fcf);
-    border-radius: 50%;
-    box-shadow: 0 4px 16px rgba(124, 111, 249, 0.18);
-    align-items: center;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    transition: background 0.2s, border 0.2s;
-    font-size: 1.1rem;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+    z-index: 2000;
+    transition: none;
   }
   #hamburger .bar {
-    background: #fff !important;
-    height: 5px;
-    width: 28px;
-    border-radius: 3px;
-    margin: 5px 0;
+    background: #22223B !important;
+    height: 4px;
+    width: 26px;
+    border-radius: 2px;
+    margin: 3px 0;
     transition: all 0.3s;
   }
   #hamburger:hover, body.nav-open #hamburger {
-    background: var(--primary-dark, #5a4fcf);
-    border-color: var(--primary, #7C6FF9);
+    background: none;
+    border: none;
   }
   #hamburger:hover .bar, body.nav-open #hamburger .bar {
-    background: #fff !important;
+    background: #22223B !important;
   }
 }
 
