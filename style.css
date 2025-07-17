@@ -755,16 +755,25 @@ body {
   }
   #hamburger .bar {
     background: #22223B !important;
+    height: 4px;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(124, 111, 249, 0.10);
     transition: all 0.3s;
   }
+  #hamburger:hover .bar {
+    background: var(--primary, #7C6FF9) !important;
+  }
+  body.nav-open #hamburger .bar {
+    background: var(--primary, #7C6FF9) !important;
+  }
   body.nav-open #hamburger .bar:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
   }
   body.nav-open #hamburger .bar:nth-child(2) {
     opacity: 0;
   }
   body.nav-open #hamburger .bar:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
   }
   /* Move dark mode toggle inside nav menu */
   .dark-mode-toggle {
