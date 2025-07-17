@@ -134,6 +134,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.7;
+    padding-top: 56px;
 }
 
 .container {
@@ -145,14 +146,13 @@ body {
 
 /* Navbar */
 .navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 2px 16px rgba(124, 111, 249, 0.07);
+    left: 0;
+    width: 100vw;
     z-index: 1000;
-    padding: 0.5rem 0;
-    transition: background 0.3s, box-shadow 0.3s;
+    background: #fff;
+    box-shadow: 0 2px 16px rgba(124, 111, 249, 0.10);
 }
 .nav-container {
     display: flex;
@@ -713,10 +713,9 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    gap: 0;
-    padding: 0;
-    min-height: 48px;
-    height: 48px;
+    min-height: 56px;
+    height: 56px;
+    padding: 0 1rem;
   }
   .nav-logo {
     font-size: 1.2rem;
@@ -726,7 +725,7 @@ body {
     text-align: left;
     display: flex;
     align-items: center;
-    height: 48px;
+    height: 56px;
   }
   #hamburger {
     display: flex;
@@ -741,8 +740,8 @@ body {
     border-radius: 0;
     margin: 0 0 0 auto;
     flex: none;
-    z-index: 2000;
-    transition: none;
+    z-index: 2001;
+    cursor: pointer;
   }
   #hamburger .bar {
     background: #22223B !important;
@@ -761,13 +760,10 @@ body {
   }
   .nav-links {
     display: none;
-  }
-  body.nav-open .nav-links {
-    display: flex;
     flex-direction: column;
     position: absolute;
-    top: 48px;
-    left: 0;
+    top: 56px;
+    right: 0;
     width: 100vw;
     background: #fff;
     box-shadow: 0 4px 24px rgba(124, 111, 249, 0.10);
@@ -776,6 +772,34 @@ body {
     gap: 1.2rem;
     padding: 1.2rem 0 1.5rem 0;
     margin: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(-20px);
+  }
+  body.nav-open .nav-links {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 0.7rem 0;
+    font-size: 1.2rem;
+    color: #22223B;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+  }
+  .nav-links a:hover {
+    background: #f5f7ff;
+    color: #7C6FF9;
   }
 }
 
