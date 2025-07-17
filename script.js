@@ -15,8 +15,8 @@ window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('DOMContentLoaded', revealOnScroll);
 
 // Smooth scroll for navbar links
-const navLinks = document.querySelectorAll('.nav-links a');
-navLinks.forEach(link => {
+const navLinkItems = document.querySelectorAll('.nav-links a');
+navLinkItems.forEach(link => {
     link.addEventListener('click', function(e) {
         const targetId = this.getAttribute('href').substring(1);
         const target = document.getElementById(targetId);
@@ -31,7 +31,7 @@ navLinks.forEach(link => {
 function highlightNav() {
     const sections = document.querySelectorAll('section');
     const scrollY = window.scrollY + 120;
-    navLinks.forEach(link => {
+    navLinkItems.forEach(link => {
         link.classList.remove('active');
         const section = document.getElementById(link.getAttribute('href').substring(1));
         if (section && section.offsetTop <= scrollY && section.offsetTop + section.offsetHeight > scrollY) {
@@ -112,4 +112,20 @@ darkModeToggle.addEventListener('click', () => {
 window.addEventListener('DOMContentLoaded', () => {
     const darkPref = localStorage.getItem('darkMode');
     setDarkMode(darkPref === 'enabled');
-}); 
+});
+
+// Hamburger menu toggle for mobile nav
+const hamburger = document.getElementById('hamburger');
+const navLinksList = document.querySelector('.nav-links');
+
+if (hamburger && navLinksList) {
+  hamburger.addEventListener('click', function () {
+    document.body.classList.toggle('nav-open');
+  });
+  // Close menu when a nav link is clicked (mobile only)
+  navLinksList.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function () {
+      document.body.classList.remove('nav-open');
+    });
+  });
+} 
