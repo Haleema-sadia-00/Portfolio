@@ -753,6 +753,40 @@ body {
     margin-top: 0.5rem;
     box-shadow: 0 2px 8px rgba(124, 111, 249, 0.10);
   }
+  #hamburger .bar {
+    background: #22223B !important;
+    transition: all 0.3s;
+  }
+  body.nav-open #hamburger .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  body.nav-open #hamburger .bar:nth-child(2) {
+    opacity: 0;
+  }
+  body.nav-open #hamburger .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  /* Move dark mode toggle inside nav menu */
+  .dark-mode-toggle {
+    position: static;
+    display: block;
+    margin: 1.2rem auto 0 auto;
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+  }
+  .nav-links {
+    /* Add space for dark mode toggle at bottom */
+    padding-bottom: 2.5rem;
+  }
+  /* Hide dark mode toggle in navbar header on mobile */
+  .nav-container > .dark-mode-toggle {
+    display: none;
+  }
+  /* Show dark mode toggle inside nav-links */
+  .nav-links .dark-mode-toggle {
+    display: block;
+  }
 }
 
 @media (min-width: 769px) {
