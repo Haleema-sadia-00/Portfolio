@@ -696,105 +696,56 @@ body {
 
 /* --- Enhanced Mobile Responsiveness --- */
 @media (max-width: 768px) {
-  .mobile-only {
-    display: block !important;
-  }
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100vw;
-    background: #fff;
-    box-shadow: 0 4px 24px rgba(124, 111, 249, 0.10);
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2rem;
-    padding: 1.2rem 0 1.5rem 0;
-    margin: 0;
-    z-index: 1100;
-    transform: translateY(-120%);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 0.3s, opacity 0.3s;
-  }
-  body.nav-open .nav-links {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .nav-links li {
-    width: 100%;
-    text-align: center;
-  }
-  .nav-links a {
-    display: block;
-    width: 100%;
-    padding: 0.7rem 0;
-    font-size: 1.2rem;
-  }
-  .nav-container {
-    position: relative;
-  }
-  #hamburger {
-    display: flex;
-  }
   .navbar {
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     padding: 0.5rem 0.5rem;
+    box-shadow: 0 2px 16px rgba(124, 111, 249, 0.10);
+    background: #fff;
+    min-height: 56px;
+  }
+  .nav-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 0;
+    padding: 0;
+  }
+  .nav-logo {
+    flex: 1;
+    text-align: left;
+    margin: 0;
+    font-size: 1.1rem;
   }
   #hamburger {
     display: flex;
     position: relative;
     z-index: 2000;
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    margin-top: 0.5rem;
-    box-shadow: 0 2px 8px rgba(124, 111, 249, 0.10);
+    background: var(--primary, #7C6FF9);
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    margin: 0 0.5rem 0 0;
+    box-shadow: 0 2px 8px rgba(124, 111, 249, 0.13);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
   }
   #hamburger .bar {
     background: #22223B !important;
     height: 4px;
     border-radius: 3px;
-    box-shadow: 0 1px 3px rgba(124, 111, 249, 0.10);
+    box-shadow: none;
     transition: all 0.3s;
   }
-  #hamburger:hover .bar {
-    background: var(--primary, #7C6FF9) !important;
+  #hamburger:hover, body.nav-open #hamburger {
+    background: var(--primary-dark, #5a4fcf);
   }
-  body.nav-open #hamburger .bar {
-    background: var(--primary, #7C6FF9) !important;
-  }
-  body.nav-open #hamburger .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  body.nav-open #hamburger .bar:nth-child(2) {
-    opacity: 0;
-  }
-  body.nav-open #hamburger .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-  /* Move dark mode toggle inside nav menu */
-  .dark-mode-toggle {
-    position: static;
-    display: block;
-    margin: 1.2rem auto 0 auto;
-    text-align: center;
-    width: 100%;
-    font-size: 2rem;
-  }
-  .nav-links {
-    /* Add space for dark mode toggle at bottom */
-    padding-bottom: 2.5rem;
-  }
-  /* Hide dark mode toggle in navbar header on mobile */
-  .nav-container > .dark-mode-toggle {
-    display: none;
-  }
-  /* Show dark mode toggle inside nav-links */
-  .nav-links .dark-mode-toggle {
-    display: block;
+  #hamburger:hover .bar, body.nav-open #hamburger .bar {
+    background: #fff !important;
   }
 }
 
