@@ -738,10 +738,7 @@ body {
   }
 } 
 
-/* Hamburger styles */
-.mobile-only {
-  display: none;
-}
+/* --- Hamburger Icon Styling --- */
 #hamburger {
   background: none;
   border: none;
@@ -758,7 +755,7 @@ body {
 #hamburger .bar {
   width: 26px;
   height: 3px;
-  background: var(--primary-dark);
+  background: var(--primary-dark, #5a4fcf);
   margin: 4px 0;
   border-radius: 2px;
   transition: all 0.3s;
@@ -817,5 +814,16 @@ body {
 @media (min-width: 769px) {
   #hamburger {
     display: none !important;
+  }
+  .nav-links {
+    position: static !important;
+    flex-direction: row !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    gap: 2rem !important;
   }
 } 
