@@ -739,7 +739,8 @@ body {
     border: none;
     box-shadow: none;
     border-radius: 0;
-    margin: 0;
+    margin: 0 0 0 auto;
+    flex: none;
     z-index: 2000;
     transition: none;
   }
