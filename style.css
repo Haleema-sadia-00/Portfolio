@@ -780,3 +780,28 @@ html, body {
     gap: 2rem !important;
   }
 } 
+
+#hamburger {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0 0 0 auto;
+  cursor: pointer;
+  z-index: 2001;
+}
+#hamburger svg {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+@media (max-width: 768px) {
+  #hamburger {
+    width: 48px;
+    height: 48px;
+  }
+} 
