@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
 /* Outstanding Modern Portfolio CSS */
 
 :root {
@@ -688,120 +690,6 @@ body {
         min-width: 0;
         padding: 1rem 0.7rem;
     }
-}
-
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'); 
-
-/* For best results, use cropped, focused screenshots for project images. */ 
-
-/* --- Enhanced Mobile Responsiveness --- */
-@media (max-width: 768px) {
-  .navbar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 0.2rem 0.5rem;
-    background: #fff;
-    min-height: 48px;
-    height: 48px;
-    box-shadow: 0 2px 16px rgba(124, 111, 249, 0.10);
-  }
-  .nav-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    min-height: 56px;
-    height: 56px;
-    padding: 0 1rem;
-  }
-  .nav-logo {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 0;
-    flex: none;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    height: 56px;
-  }
-  #hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 36px;
-    height: 36px;
-    background: none;
-    border: none;
-    box-shadow: none;
-    border-radius: 0;
-    margin: 0 0 0 auto;
-    flex: none;
-    z-index: 2001;
-    cursor: pointer;
-  }
-  #hamburger .bar {
-    background: #22223B !important;
-    height: 4px;
-    width: 26px;
-    border-radius: 2px;
-    margin: 3px 0;
-    transition: all 0.3s;
-  }
-  #hamburger:hover, body.nav-open #hamburger {
-    background: none;
-    border: none;
-  }
-  #hamburger:hover .bar, body.nav-open #hamburger .bar {
-    background: #22223B !important;
-  }
-  .nav-links {
-    display: none !important;
-    flex-direction: column;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 56px;
-    width: 100vw;
-    background: #fff;
-    box-shadow: 0 4px 24px rgba(124, 111, 249, 0.10);
-    z-index: 2000;
-    align-items: center;
-    gap: 1.2rem;
-    padding: 1.2rem 0 1.5rem 0;
-    margin: 0;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s, transform 0.3s;
-    transform: translateY(-20px);
-  }
-  body.nav-open .nav-links {
-    display: flex !important;
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-  }
-  .nav-links li {
-    width: 100%;
-    text-align: center;
-  }
-  .nav-links a {
-    display: block;
-    width: 100%;
-    padding: 0.7rem 0;
-    font-size: 1.2rem;
-    color: #22223B;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.2s, color 0.2s;
-  }
-  .nav-links a:hover {
-    background: #f5f7ff;
-    color: #7C6FF9;
-  }
 }
 
 @media (min-width: 769px) {

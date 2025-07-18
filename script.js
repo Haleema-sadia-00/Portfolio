@@ -94,25 +94,27 @@ const darkModeIcon = document.getElementById('darkModeIcon');
 function setDarkMode(enabled) {
     if (enabled) {
         document.body.classList.add('dark-mode');
-        darkModeIcon.textContent = '☀️';
+        if (darkModeIcon) darkModeIcon.textContent = '☀️';
         localStorage.setItem('darkMode', 'enabled');
     } else {
         document.body.classList.remove('dark-mode');
-        darkModeIcon.textContent = '🌙';
+        if (darkModeIcon) darkModeIcon.textContent = '🌙';
         localStorage.setItem('darkMode', 'disabled');
     }
 }
 
-darkModeToggle.addEventListener('click', () => {
-    const isDark = document.body.classList.contains('dark-mode');
-    setDarkMode(!isDark);
-});
+if (darkModeToggle && darkModeIcon) {
+    darkModeToggle.addEventListener('click', () => {
+        const isDark = document.body.classList.contains('dark-mode');
+        setDarkMode(!isDark);
+    });
 
-// Load dark mode preference on page load
-window.addEventListener('DOMContentLoaded', () => {
-    const darkPref = localStorage.getItem('darkMode');
-    setDarkMode(darkPref === 'enabled');
-});
+    // Load dark mode preference on page load
+    window.addEventListener('DOMContentLoaded', () => {
+        const darkPref = localStorage.getItem('darkMode');
+        setDarkMode(darkPref === 'enabled');
+    });
+}
 
 // Hamburger menu toggle for mobile nav
 const hamburger = document.getElementById('hamburger');
