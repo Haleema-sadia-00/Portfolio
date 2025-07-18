@@ -811,3 +811,9 @@ html, body {
     z-index: 99999 !important;
   }
 } 
+
+@media (max-width: 768px) {
+  #hamburger, .nav-links {
+    display: none !important;
+  }
+} 
