@@ -792,16 +792,22 @@ html, body {
   padding: 0;
   margin: 0 0 0 auto;
   cursor: pointer;
-  z-index: 2001;
+  z-index: 99999 !important;
+  position: relative;
+  pointer-events: auto !important;
 }
 #hamburger svg {
   width: 32px;
   height: 32px;
   display: block;
+  pointer-events: none;
 }
 @media (max-width: 768px) {
   #hamburger {
     width: 48px;
     height: 48px;
+    display: flex !important;
+    position: relative;
+    z-index: 99999 !important;
   }
 } 
