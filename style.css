@@ -759,7 +759,7 @@ body {
     background: #22223B !important;
   }
   .nav-links {
-    display: none;
+    display: none !important;
     flex-direction: column;
     position: absolute;
     top: 56px;
@@ -778,7 +778,7 @@ body {
     transform: translateY(-20px);
   }
   body.nav-open .nav-links {
-    display: flex;
+    display: flex !important;
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
